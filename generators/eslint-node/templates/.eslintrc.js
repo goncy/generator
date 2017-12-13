@@ -1,4 +1,6 @@
-{
+const IS_PRODUCTION = process.env.NODE_ENV === 'production'
+
+module.exports = {
   "root": true,
   "extends": [
     "standard",
@@ -21,6 +23,8 @@
     "mocha": true
   },
   "rules": {
+    'no-debugger': IS_PRODUCTION ? 'error' : 'off',
+    'no-console': IS_PRODUCTION ? 'error' : 'off',
     "prettier/prettier": [
       "error",
       {

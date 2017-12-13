@@ -1,4 +1,6 @@
-{
+const IS_PRODUCTION = process.env.NODE_ENV === 'production'
+
+module.exports = {
   "root": true,
   "extends": [
     "standard",
@@ -35,7 +37,9 @@
     }
   },
   "rules": {
-    "no-console": 1,
+    'no-debugger': IS_PRODUCTION ? 'error' : 'off',
+    'no-console': IS_PRODUCTION ? 'error' : 'off',
+    "react/prop-types": 0,
     "prettier/prettier": [
       "error",
       {

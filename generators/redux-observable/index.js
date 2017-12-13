@@ -2,9 +2,19 @@ const Generator = require("yeoman-generator")
 
 module.exports = class extends Generator {
   installDependencies() {
-    this.npmInstall(["redux", "react-redux", "async-action-creator"], {
-      save: true
-    })
+    this.npmInstall(
+      [
+        "redux",
+        "react-redux",
+        "redux-observable",
+        "async-action-creator",
+        "ramda",
+        "rxjs"
+      ],
+      {
+        save: true
+      }
+    )
   }
 
   writing() {
