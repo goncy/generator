@@ -26,8 +26,8 @@ module.exports = class extends Generator {
 
   writing() {
     this.fs.copy(
-      this.templatePath(".eslintrc"),
-      this.destinationPath(".eslintrc")
+      this.templatePath(".eslintrc.js"),
+      this.destinationPath(".eslintrc.js")
     )
   }
 }
