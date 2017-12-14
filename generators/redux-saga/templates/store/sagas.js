@@ -1,11 +1,11 @@
 import { fork, all } from "redux-saga/effects"
 import * as R from "ramda"
 
-import context from "./branches/context"
+import { sagas as app } from "./features/sagas"
 
-const branches = [context.sagas]
+const features = [app]
+const sagas = R.pipe(R.map(R.values), R.flatten, R.map(fork))(features)
 
 export default function* rootSaga() {
-  const sagas = R.pipe(R.map(R.values), R.flatten, R.map(fork))(branches)
   yield all([...sagas])
 }

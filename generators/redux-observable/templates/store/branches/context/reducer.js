@@ -1,4 +1,4 @@
-import { appLoaded } from "./actions"
+import { actions as appActions } from "../../features/app"
 
 const initialState = {
   loaded: false
@@ -6,7 +6,7 @@ const initialState = {
 
 const context = (state = initialState, { type, payload }) => {
   switch (type) {
-    case appLoaded.SUCCESS:
+    case appActions.appLoaded.SUCCESS:
       return {
         ...state,
         loaded: true

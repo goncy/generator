@@ -1,6 +1,6 @@
 import { combineReducers } from "redux"
 
-import context from "./branches/context"
+import * as context from "./branches/context"
 
 const rootReducer = combineReducers({
   [context.constants.NAMESPACE]: context.reducer
