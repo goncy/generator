@@ -20,7 +20,8 @@ module.exports = {
     "commonjs": true,
     "node": true,
     "es6": true,
-    "mocha": true
+    "mocha": true,
+    "jest": true
   },
   "rules": {
     'no-debugger': IS_PRODUCTION ? 'error' : 'off',
