@@ -1,23 +1,23 @@
-const IS_PRODUCTION = process.env.NODE_ENV === 'production'
+const IS_PRODUCTION = process.env.NODE_ENV === "production"
 
 module.exports = {
   root: true,
-  parser: 'babel-eslint',
+  parser: "babel-eslint",
   parserOptions: {
-    sourceType: 'module'
+    sourceType: "module"
   },
   env: {
     browser: true,
   },
-  extends: ['standard', "prettier", "eslint:recommended"],
+  extends: ["standard", "prettier", "eslint:recommended"],
   plugins: [
-    'html',
+    "html",
     "prettier"
   ],
   rules: {
-    'generator-star-spacing': 'off',
-    'no-debugger': IS_PRODUCTION ? 'error' : 'off',
-    'no-console': IS_PRODUCTION ? 'error' : 'off',
+    "generator-star-spacing": "off",
+    "no-debugger": IS_PRODUCTION ? "error" : "off",
+    "no-console": IS_PRODUCTION ? "error" : "off",
     "prettier/prettier": [
       "error",
       {

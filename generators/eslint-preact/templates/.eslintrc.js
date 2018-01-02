@@ -5,27 +5,44 @@ module.exports = {
   "extends": [
     "standard",
     "prettier",
-    "eslint:recommended"
+    "prettier/react",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:flowtype/recommended"
   ],
   "plugins": [
-    "prettier"
+    "react",
+    "prettier",
+    "flowtype"
   ],
   "parser": "babel-eslint",
   "parserOptions": {
     "ecmaVersion": 2016,
-    "sourceType": "module"
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
   },
   "env": {
     "browser": true,
     "commonjs": true,
     "node": true,
     "es6": true,
-    "mocha": true,
-    "jest": true
+    "jest": true,
+    "mocha": true
+  },
+  "settings": {
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": true
+    },
+    "react": {
+      "pragma": "h"
+    }
   },
   "rules": {
     "no-debugger": IS_PRODUCTION ? "error" : "off",
     "no-console": IS_PRODUCTION ? "error" : "off",
+    "react/prop-types": "off",
     "prettier/prettier": [
       "error",
       {
