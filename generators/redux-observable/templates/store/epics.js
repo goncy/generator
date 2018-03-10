@@ -1,9 +1,5 @@
-import { combineEpics } from "redux-observable"
-import * as R from "ramda"
+import {combineEpics} from "redux-observable";
 
-import { epics as app } from "./features/app"
+import app from "./epics/app";
 
-const features = [app]
-const epics = R.pipe(R.map(R.values), R.flatten)(features)
-
-export default combineEpics(...epics)
+export default combineEpics(app);

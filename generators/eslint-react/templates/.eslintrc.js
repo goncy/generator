@@ -1,9 +1,6 @@
-const IS_PRODUCTION = process.env.NODE_ENV === "production"
-
 module.exports = {
   "root": true,
   "extends": [
-    "standard",
     "prettier",
     "prettier/react",
     "eslint:recommended",
@@ -13,7 +10,8 @@ module.exports = {
   "plugins": [
     "react",
     "prettier",
-    "flowtype"
+    "flowtype",
+    "cypress"
   ],
   "parser": "babel-eslint",
   "parserOptions": {
@@ -29,7 +27,8 @@ module.exports = {
     "node": true,
     "es6": true,
     "jest": true,
-    "mocha": true
+    "mocha": true,
+    "cypress/globals": true
   },
   "settings": {
     "flowtype": {
@@ -37,14 +36,16 @@ module.exports = {
     }
   },
   "rules": {
-    "no-debugger": IS_PRODUCTION ? "error" : "off",
-    "no-console": IS_PRODUCTION ? "error" : "off",
+    "no-debugger": "off",
+    "no-console": "off",
     "react/prop-types": "off",
     "prettier/prettier": [
       "error",
       {
-        "semi": false
-      }
-    ]
+        "semi": true,
+        "bracketSpacing": false,
+        "trailingComma": "es5",
+      },
+    ],
   }
 }

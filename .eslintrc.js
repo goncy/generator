@@ -1,19 +1,26 @@
 module.exports = {
   "root": true,
+  "extends": [
+    "standard",
+    "prettier",
+    "eslint:recommended"
+  ],
+  "plugins": [
+    "prettier"
+  ],
   "parser": "babel-eslint",
   "parserOptions": {
+    "ecmaVersion": 2016,
     "sourceType": "module"
   },
   "env": {
     "browser": true,
+    "commonjs": true,
+    "node": true,
+    "es6": true,
+    "mocha": true
   },
-  "extends": ["prettier", "eslint:recommended"],
-  "plugins": [
-    "html",
-    "prettier"
-  ],
   "rules": {
-    "generator-star-spacing": "off",
     "no-debugger": "off",
     "no-console": "off",
     "prettier/prettier": [
@@ -21,8 +28,8 @@ module.exports = {
       {
         "semi": true,
         "bracketSpacing": false,
-        "trailingComma": "es5",
-      },
-    ],
+        "trailingComma": "es5"
+      }
+    ]
   }
 }

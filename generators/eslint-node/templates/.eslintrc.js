@@ -1,9 +1,6 @@
-const IS_PRODUCTION = process.env.NODE_ENV === "production"
-
 module.exports = {
   "root": true,
   "extends": [
-    "standard",
     "prettier",
     "eslint:recommended"
   ],
@@ -24,13 +21,15 @@ module.exports = {
     "jest": true
   },
   "rules": {
-    "no-debugger": IS_PRODUCTION ? "error" : "off",
-    "no-console": IS_PRODUCTION ? "error" : "off",
+    "no-debugger": "off",
+    "no-console": "off",
     "prettier/prettier": [
       "error",
       {
-        "semi": false
-      }
-    ]
+        "semi": true,
+        "bracketSpacing": false,
+        "trailingComma": "es5",
+      },
+    ],
   }
 }

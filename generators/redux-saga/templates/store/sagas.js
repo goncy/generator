@@ -1,11 +1,12 @@
-import { fork, all } from "redux-saga/effects"
-import * as R from "ramda"
+import {fork, all} from "redux-saga/effects";
+import * as R from "ramda";
 
-import { sagas as app } from "./features/app"
+import app from "./sagas/app/";
 
-const features = [app]
-const sagas = R.pipe(R.map(R.values), R.flatten, R.map(fork))(features)
+const flattenSagas = R.pipe(R.flatten, R.map(fork), all);
+
+const sagas = [app];
 
 export default function* rootSaga() {
-  yield all([...sagas])
+  yield flattenSagas(sagas);
 }

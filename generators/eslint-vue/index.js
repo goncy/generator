@@ -1,4 +1,4 @@
-const Generator = require("yeoman-generator")
+const Generator = require("yeoman-generator");
 
 module.exports = class extends Generator {
   installDependencies() {
@@ -7,27 +7,29 @@ module.exports = class extends Generator {
         "babel-eslint",
         "eslint",
         "eslint-config-prettier",
-        "eslint-config-standard",
         "eslint-friendly-formatter",
         "eslint-loader",
         "eslint-plugin-html",
-        "eslint-plugin-import",
-        "eslint-plugin-node",
         "eslint-plugin-prettier",
-        "eslint-plugin-promise",
-        "eslint-plugin-standard",
-        "prettier"
+        "prettier",
       ],
       {
-        "save-dev": true
+        "save-dev": true,
       }
-    )
+    );
   }
 
-  writing() {
+  eslint() {
     this.fs.copy(
       this.templatePath(".eslintrc.js"),
       this.destinationPath(".eslintrc.js")
-    )
+    );
   }
-}
+
+  editorconfig() {
+    this.fs.copy(
+      this.templatePath(".editorconfig"),
+      this.destinationPath(".editorconfig")
+    );
+  }
+};

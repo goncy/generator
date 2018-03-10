@@ -7,12 +7,7 @@ module.exports = class extends Generator {
         "babel-eslint",
         "eslint",
         "eslint-config-prettier",
-        "eslint-config-standard",
-        "eslint-plugin-import",
-        "eslint-plugin-node",
         "eslint-plugin-prettier",
-        "eslint-plugin-promise",
-        "eslint-plugin-standard",
         "prettier"
       ],
       {
