@@ -2,21 +2,18 @@ const Generator = require("yeoman-generator");
 
 module.exports = class extends Generator {
   installDependencies() {
-    this.npmInstall(
-      [
-        "babel-eslint",
-        "eslint",
-        "eslint-config-prettier",
-        "eslint-friendly-formatter",
-        "eslint-loader",
-        "eslint-plugin-html",
-        "eslint-plugin-prettier",
-        "prettier",
-      ],
-      {
-        "save-dev": true,
-      }
-    );
+    this.spawnCommand("npm", [
+      "add",
+      "-d",
+      "babel-eslint",
+      "eslint",
+      "eslint-config-prettier",
+      "eslint-friendly-formatter",
+      "eslint-loader",
+      "eslint-plugin-html",
+      "eslint-plugin-prettier",
+      "prettier",
+    ]);
   }
 
   eslint() {

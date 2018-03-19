@@ -3,7 +3,8 @@ const Generator = require("yeoman-generator");
 module.exports = class extends Generator {
   installDependencies() {
     this.spawnCommand("npm", [
-      "install",
+      "add",
+      "-d",
       "babel-eslint",
       "eslint",
       "eslint-config-prettier",
@@ -12,7 +13,6 @@ module.exports = class extends Generator {
       "eslint-plugin-react",
       "eslint-plugin-cypress",
       "prettier",
-      "--save-dev",
     ]);
   }
 
