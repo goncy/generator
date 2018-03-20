@@ -3,6 +3,7 @@ module.exports = {
   "extends": [
     "prettier",
     "prettier/react",
+    "react-app",
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:flowtype/recommended"
@@ -39,6 +40,13 @@ module.exports = {
     "no-debugger": "off",
     "no-console": "off",
     "react/prop-types": "off",
+    "no-unused-vars": [
+      "error",
+      {
+        "args": "all",
+        "ignoreRestSiblings": false
+      }
+    ],
     "prettier/prettier": [
       "error",
       {

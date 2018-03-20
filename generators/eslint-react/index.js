@@ -12,6 +12,9 @@ module.exports = class extends Generator {
       "eslint-plugin-prettier",
       "eslint-plugin-react",
       "eslint-plugin-cypress",
+      "eslint-plugin-import",
+      "eslint-plugin-jsx-a11y",
+      "eslint-config-react-app",
       "prettier",
     ]);
   }
