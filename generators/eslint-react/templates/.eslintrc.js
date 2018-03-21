@@ -40,6 +40,8 @@ module.exports = {
     "no-debugger": "off",
     "no-console": "off",
     "react/prop-types": "off",
+    "jsx-a11y/href-no-hash": "off",
+    "jsx-a11y/anchor-is-valid": ["warn", { "aspects": ["invalidHref"] }],
     "no-unused-vars": [
       "error",
       {
