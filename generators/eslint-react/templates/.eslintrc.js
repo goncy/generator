@@ -45,7 +45,7 @@ module.exports = {
     "no-unused-vars": [
       "error",
       {
-        "args": "all",
+        "args": "after-used",
         "ignoreRestSiblings": false
       }
     ],

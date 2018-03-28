@@ -4,7 +4,7 @@ module.exports = class extends Generator {
   installDependencies() {
     this.spawnCommand("npm", [
       "add",
-      "-d",
+      "--save-dev",
       "babel-eslint",
       "eslint",
       "eslint-config-prettier",

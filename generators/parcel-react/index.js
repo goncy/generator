@@ -10,7 +10,7 @@ module.exports = class extends Generator {
   installDependencies() {
     this.spawnCommand("npm", [
       "add",
-      "-d",
+      "--save-dev",
       "parcel-bundler",
       "babel-preset-env",
       "babel-preset-react",

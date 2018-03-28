@@ -1,3 +1,4 @@
+import React from "react";
 import {Router, Route, Switch, NavLink} from "dva/router";
 
 import Index from "./routes/Index";

@@ -1,0 +1,20 @@
+{
+  "root": true,
+  "env": {
+    "node": true,
+  },
+  "extends": [
+    "plugin:vue/essential",
+    "@vue/prettier"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "semi": true,
+        "bracketSpacing": false,
+        "trailingComma": "es5",
+      }
+    ]
+  }
+}
