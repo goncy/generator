@@ -2,18 +2,13 @@ const Generator = require("yeoman-generator");
 
 module.exports = class extends Generator {
   installDependencies() {
-    this.spawnCommand("npm", [
-      "add",
-      "--save-dev",
-      "@vue/cli-plugin-eslint",
-      "@vue/eslint-config-prettier",
-    ]);
+    this.spawnCommand("npm", ["add", "--save-dev", "eslint-plugin-vue"]);
   }
 
   eslint() {
     this.fs.copy(
-      this.templatePath(".eslintrc"),
-      this.destinationPath(".eslintrc")
+      this.templatePath(".eslintrc.js"),
+      this.destinationPath(".eslintrc.js")
     );
   }
 
