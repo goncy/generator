@@ -2,7 +2,7 @@ const Generator = require("yeoman-generator");
 
 module.exports = class extends Generator {
   addKeymaster() {
-    this.spawnCommand("npm", ["add", "keymaster"]);
+    this.spawnCommand("npm", ["install", "keymaster"]);
   }
 
   writing() {

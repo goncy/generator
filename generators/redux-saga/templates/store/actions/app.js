@@ -1,3 +1,3 @@
-import {makeAction} from "async-action-creator";
+import {createAction} from "async-action-creator";
 
-export const appLoaded = makeAction("app/APP_LOADED");
+export const appLoaded = createAction("app/APP_LOADED");

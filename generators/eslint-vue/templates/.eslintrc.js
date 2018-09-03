@@ -1,37 +1,31 @@
 module.exports = {
-  "root": true,
-  "env": {
-    "jest": true,
-    "node": true
+  root: true,
+  'extends': [
+    'plugin:vue/recommended',
+    '@vue/prettier'
+  ],
+  "parserOptions": {
+    "parser": "babel-eslint"
   },
-  "plugins": [
-    "vue",
-    "prettier"
-  ],
-  "extends": [
-    "eslint:recommended",
-    "plugin:vue/recommended",
-    "prettier"
-  ],
   "rules": {
-    "vue/html-self-closing": ["error", {
-      "html": {
-        "void": "always",
-        "normal": "always",
-        "component": "always"
+    "no-debugger": "off",
+    "no-console": "off",
+    "react/prop-types": "off",
+    "jsx-a11y/href-no-hash": "off",
+    "no-unused-vars": [
+      "error",
+      {
+        "args": "after-used",
+        "ignoreRestSiblings": false
       }
-    }],
-    "vue/html-closing-bracket-newline": ["error", {
-      "singleline": "always",
-      "multiline": "always"
-    }],
+    ],
     "prettier/prettier": [
       "error",
       {
         "semi": true,
         "bracketSpacing": false,
-        "trailingComma": "es5"
-      }
-    ]
+        "trailingComma": "es5",
+      },
+    ],
   }
 }

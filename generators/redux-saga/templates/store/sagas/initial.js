@@ -1,7 +1,7 @@
 import {delay} from "redux-saga";
 import {put, take, call} from "redux-saga/effects";
 
-import {appLoaded} from "../../actions/app";
+import {appLoaded} from "../actions/app";
 
 function* initialSaga() {
   yield delay(1000);

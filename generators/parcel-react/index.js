@@ -9,7 +9,7 @@ module.exports = class extends Generator {
 
   installDependencies() {
     this.spawnCommand("npm", [
-      "add",
+      "install",
       "--save-dev",
       "parcel-bundler",
       "babel-preset-env",
@@ -19,6 +19,6 @@ module.exports = class extends Generator {
       "babel-plugin-transform-object-rest-spread",
     ]);
 
-    this.spawnCommand("npm", ["add", "react", "react-dom"]);
+    this.spawnCommand("npm", ["install", "react", "react-dom"]);
   }
 };

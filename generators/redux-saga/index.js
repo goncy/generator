@@ -3,7 +3,7 @@ const Generator = require("yeoman-generator");
 module.exports = class extends Generator {
   installDependencies() {
     this.spawnCommand("npm", [
-      "add",
+      "install",
       "redux",
       "react-redux",
       "redux-saga",
