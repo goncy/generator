@@ -1,4 +1,4 @@
-import * as appActions from "../actions/app";
+import {appLoaded} from "../actions/app";
 
 const initialState = {
   loaded: false,
@@ -6,7 +6,7 @@ const initialState = {
 
 const context = (state = initialState, {type}) => {
   switch (type) {
-    case appActions.appLoaded.RESOLVED:
+    case appLoaded.RESOLVED:
       return {
         ...state,
         loaded: true,

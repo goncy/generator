@@ -1,9 +1,3 @@
-import {appLoaded} from "./actions/app";
+import jokes from "./services/jokes";
 
-export default {
-  [appLoaded.TYPE]: {
-    uri: "https://api.chucknorris.io/jokes/random",
-    method: "GET",
-    selector: result => result.value,
-  },
-};
+export default Object.assign({}, jokes);
