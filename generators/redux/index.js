@@ -7,6 +7,7 @@ module.exports = class extends Generator {
       "redux",
       "react-redux",
       "async-action-creator",
+      "react-local-form",
     ]);
   }
 
