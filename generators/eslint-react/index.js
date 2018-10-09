@@ -4,6 +4,8 @@ module.exports = class extends Generator {
   installDependencies() {
     this.yarnInstall(
       [
+        "eslint",
+        "babel-eslint",
         "eslint-config-prettier",
         "eslint-plugin-flowtype",
         "eslint-plugin-prettier",
@@ -16,6 +18,10 @@ module.exports = class extends Generator {
       ],
       {dev: true}
     );
+  }
+
+  env() {
+    this.fs.copy(this.templatePath(".env"), this.destinationPath(".env"));
   }
 
   eslint() {

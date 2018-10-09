@@ -3,6 +3,10 @@ import {connect} from "react-redux";
 import {Form as LocalForm} from "react-local-form";
 
 class Form extends Component {
+  static defaultProps = {
+    children: null,
+  };
+
   componentDidMount() {
     const {onMount, dispatch} = this.props;
     let action;
@@ -23,7 +27,7 @@ class Form extends Component {
   };
 
   render() {
-    const {status, error, values, children} = this.props;
+    const {status, error, values, children, render} = this.props;
 
     return (
       <Fragment>
@@ -31,7 +35,7 @@ class Form extends Component {
         {status === "pending" && <p>Loading...</p>}
         {status === "rejected" && <p>{error}</p>}
         {status === "resolved" && (
-          <LocalForm values={values} onSubmit={this.onSubmit}>
+          <LocalForm values={values} onSubmit={this.onSubmit} render={render}>
             {children}
           </LocalForm>
         )}
