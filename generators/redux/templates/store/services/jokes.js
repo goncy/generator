@@ -5,6 +5,6 @@ export default {
     action: joke,
     uri: "https://api.chucknorris.io/jokes/random",
     method: "GET",
-    selector: result => result.value,
+    onResolve: result => result.value,
   },
 };

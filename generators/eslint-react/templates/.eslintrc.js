@@ -1,11 +1,9 @@
 module.exports = {
   "root": true,
   "extends": [
+    "airbnb",
     "prettier",
     "prettier/react",
-    "react-app",
-    "eslint:recommended",
-    "plugin:react/recommended",
     "plugin:flowtype/recommended"
   ],
   "plugins": [
@@ -37,24 +35,22 @@ module.exports = {
     }
   },
   "rules": {
-    "no-debugger": "off",
-    "no-console": "off",
-    "react/prop-types": "off",
-    "jsx-a11y/href-no-hash": "off",
-    "jsx-a11y/anchor-is-valid": ["warn", { "aspects": ["invalidHref"] }],
-    "no-unused-vars": [
-      "error",
-      {
-        "args": "after-used",
-        "ignoreRestSiblings": false
-      }
-    ],
+    "no-debugger": "warn",
+    "no-console": "warn",
+    "import/prefer-default-export": "off",
+    "react/jsx-filename-extension": "off",
     "prettier/prettier": [
       "error",
       {
         "semi": true,
-        "bracketSpacing": false,
         "trailingComma": "es5",
+        "printWidth": 80,
+        "tabWidth": 2,
+        "useTabs": false,
+        "singleQuote": false,
+        "bracketSpacing": false,
+        "jsxBracketSameLine": false,
+        "fluid": false
       },
     ],
   }

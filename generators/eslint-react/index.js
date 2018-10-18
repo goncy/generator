@@ -9,15 +9,18 @@ module.exports = class extends Generator {
         "eslint-config-prettier",
         "eslint-plugin-flowtype",
         "eslint-plugin-prettier",
-        "eslint-plugin-react",
         "eslint-plugin-cypress",
-        "eslint-plugin-import",
-        "eslint-plugin-jsx-a11y",
-        "eslint-config-react-app",
         "prettier",
       ],
       {dev: true}
     );
+
+    this.spawnCommand("npx", [
+      "install-peerdeps",
+      "--dev",
+      "--yarn",
+      "eslint-config-airbnb",
+    ]);
   }
 
   env() {

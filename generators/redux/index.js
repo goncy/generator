@@ -16,5 +16,7 @@ module.exports = class extends Generator {
       this.templatePath("store"),
       this.destinationPath("./src/store")
     );
+
+    this.fs.copy(this.templatePath("iu"), this.destinationPath("./src/iu"));
   }
 };
