@@ -2,10 +2,7 @@
 import { Provider } from "react-redux"
 
 // Store
-import configureStore from "./store/configureStore"
-
-// Initialize store
-const store = configureStore()
+import store from "./db/store"
 
 // Wrap app
 <Provider store={store}>

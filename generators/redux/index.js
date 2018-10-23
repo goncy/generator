@@ -12,11 +12,6 @@ module.exports = class extends Generator {
   }
 
   writing() {
-    this.fs.copy(
-      this.templatePath("store"),
-      this.destinationPath("./src/store")
-    );
-
-    this.fs.copy(this.templatePath("iu"), this.destinationPath("./src/iu"));
+    this.fs.copy(this.templatePath("./"), this.destinationPath("./src"));
   }
 };

@@ -39,6 +39,19 @@ module.exports = {
     "no-console": "warn",
     "import/prefer-default-export": "off",
     "react/jsx-filename-extension": "off",
+    "no-underscore-dangle": "off",
+    "no-unused-expressions": ["error", { allowShortCircuit: true }],
+    "react/sort-comp": [
+      "error", {
+        order: [
+          'type-annotations',
+          'static-methods',
+          'lifecycle',
+          'everything-else',
+          'render'
+        ],
+      }
+    ],
     "prettier/prettier": [
       "error",
       {
@@ -49,8 +62,7 @@ module.exports = {
         "useTabs": false,
         "singleQuote": false,
         "bracketSpacing": false,
-        "jsxBracketSameLine": false,
-        "fluid": false
+        "jsxBracketSameLine": false
       },
     ],
   }

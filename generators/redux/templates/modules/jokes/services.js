@@ -1,4 +1,4 @@
-import {joke} from "../actions/jokes";
+import {joke} from "./actions";
 
 export default {
   [joke.FETCH]: {
