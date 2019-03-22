@@ -5,35 +5,20 @@ module.exports = class extends Generator {
     this.yarnInstall(
       [
         "eslint",
-        "babel-eslint",
+        // "babel-eslint",
+        "eslint-config-react-app",
         "eslint-config-prettier",
-        "eslint-config-airbnb",
+        "eslint-plugin-import",
         "eslint-plugin-prettier",
         "eslint-plugin-cypress",
-        "eslint-plugin-import",
         "eslint-plugin-react",
         "eslint-plugin-react-hooks",
+        "eslint-plugin-flowtype",
         "eslint-plugin-jsx-a11y",
-        "eslint-import-resolver-typescript",
         "prettier",
       ],
       {dev: true}
     );
-
-    this.yarnInstall([
-      "typescript",
-      "@types/jest",
-      "@types/node",
-      "@types/react",
-      "@types/react-dom",
-    ]);
-
-    this.spawnCommand("npx", [
-      "install-peerdeps",
-      "--dev",
-      "--yarn",
-      "eslint-config-airbnb",
-    ]);
   }
 
   env() {
