@@ -1,17 +1,11 @@
 const Generator = require("yeoman-generator");
 
 module.exports = class extends Generator {
-  installDependencies() {
-    this.spawnCommand("npm", [
-      "install",
-      "redux",
-      "react-redux",
-      "async-action-creator",
-      "react-local-form",
-    ]);
-  }
-
   writing() {
     this.fs.copy(this.templatePath("./"), this.destinationPath("./src"));
+  }
+
+  installDependencies() {
+    this.yarnInstall(["redux", "react-redux", "async-action-creator"]);
   }
 };

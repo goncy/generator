@@ -1,7 +1,7 @@
 {
   "name": "generator-goncy",
   "version": "1.0.7",
-  "description": "Goncy desired generator",
+  "description": "Goncy generator",
   "author": "goncy",
   "license": "ISC",
   "files": [
