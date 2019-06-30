@@ -1,46 +1,22 @@
 {
-  "root": true,
-  "extends": [
-    "airbnb",
-    "prettier"
-  ],
-  "plugins": [
-    "prettier"
-  ],
-  "parser": "babel-eslint",
-  "parserOptions": {
-    "ecmaVersion": 2016,
-    "sourceType": "module"
-  },
+  "extends": ["airbnb-base", "plugin:prettier/recommended", "plugin:jest/recommended"],
+  "plugins": ["promise", "prettier", "jest"],
   "env": {
-    "browser": true,
-    "commonjs": true,
     "node": true,
-    "es6": true,
-    "mocha": true,
     "jest": true
   },
   "rules": {
-    "prefer-const": ["error", {"destructuring": "all"}],
-    "import/prefer-default-export": "off",
-    "no-debugger": "warn",
-    "no-console": "warn",
-    "no-underscore-dangle": "off",
-    "no-nested-ternary": "off",
-    "no-unused-expressions": ["error", { "allowShortCircuit": true }],
-    "consistent-return": "off",
-    "jsx-a11y/click-events-have-key-events": "off",
-    "jsx-a11y/no-autofocus": "off",
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error",
     "prettier/prettier": [
       "error",
       {
-        "semi": true,
-        "trailingComma": "es5",
-        "printWidth": 80,
-        "tabWidth": 2,
-        "useTabs": false,
-        "singleQuote": false,
-        "bracketSpacing": false
+        "printWidth": 120,
+        "singleQuote": true,
+        "trailingComma": "es5"
       }
     ]
   }

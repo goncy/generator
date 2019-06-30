@@ -5,6 +5,7 @@ module.exports = class extends Generator {
     this.yarnInstall(
       [
         "eslint",
+        "babel-eslint",
         "eslint-config-react-app",
         "eslint-config-prettier",
         "eslint-plugin-import",

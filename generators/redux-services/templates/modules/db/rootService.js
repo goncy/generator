@@ -1,4 +1,4 @@
-import {requireAll} from "./utils";
+import {requireAll} from "goncy/utils/discover";
 
 export default Object.assign(
   {},

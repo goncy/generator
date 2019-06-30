@@ -5,22 +5,16 @@ module.exports = class extends Generator {
     this.yarnInstall(
       [
         "eslint",
-        "babel-eslint",
         "eslint-config-prettier",
-        "eslint-config-airbnb",
+        "eslint-config-airbnb-base",
+        "eslint-plugin-import",
+        "eslint-plugin-jest",
         "eslint-plugin-prettier",
-        "eslint-plugin-jsx-a11y",
+        "eslint-plugin-promise",
         "prettier",
       ],
       {dev: true}
     );
-
-    this.spawnCommand("npx", [
-      "install-peerdeps",
-      "--dev",
-      "--yarn",
-      "eslint-config-airbnb",
-    ]);
   }
 
   eslint() {
