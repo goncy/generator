@@ -16,9 +16,9 @@
     }
   },
   "rules": {
-    "no-console": "error",
+    "no-console": "warn",
     "no-unused-vars": [
-      "error",
+      "warn",
       {
         "args": "after-used",
         "ignoreRestSiblings": false,
@@ -26,18 +26,18 @@
       }
     ],
     "prettier/prettier": [
-      "error",
+      "warn",
       {
         "semi": true,
         "trailingComma": "es5",
         "printWidth": 120
       }
     ],
-    "import/order": ["error", {"newlines-between": "always"}],
-    "react/self-closing-comp": "error",
-    "react-hooks/rules-of-hooks": "error",
+    "import/order": ["warn", {"newlines-between": "always"}],
+    "react/self-closing-comp": "warn",
+    "react-hooks/rules-of-hooks": "warn",
     "react-hooks/exhaustive-deps": "warn",
-    "react/jsx-sort-props": ["error", {
+    "react/jsx-sort-props": ["warn", {
       "callbacksLast": true,
       "shorthandFirst": true,
       "noSortAlphabetically": false,

@@ -1,0 +1,43 @@
+{
+  "extends": ["eslint:recommended", "plugin:import/recommended"],
+  "plugins": ["import", "svelte3", "prettier"],
+  "globals": {
+    "cy": "readonly"
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true,
+    "node": true
+  },
+  "overrides": [
+    {
+      "files": ["**/*.svelte"],
+      "processor": "svelte3/svelte3"
+    }
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-console": "warn",
+    "no-unused-vars": [
+      "warn",
+      {
+        "args": "after-used",
+        "ignoreRestSiblings": false,
+        "argsIgnorePattern": "^_$"
+      }
+    ],
+    "prettier/prettier": [
+      "warn",
+      {
+        "semi": true,
+        "trailingComma": "es5",
+        "printWidth": 120
+      }
+    ],
+    "import/order": ["warn", {"newlines-between": "always"}]
+   }
+}
