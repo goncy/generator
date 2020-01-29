@@ -3,9 +3,12 @@ const Generator = require("yeoman-generator");
 module.exports = class extends Generator {
   installDependencies() {
     this.yarnInstall(["tailwindcss"]);
-    this.yarnInstall(["@fullhuman/postcss-purgecss", "postcss-cli"], {
-      dev: true,
-    });
+    this.yarnInstall(
+      ["@fullhuman/postcss-purgecss", "postcss-cli", "autoprefixer"],
+      {
+        dev: true,
+      }
+    );
   }
 
   updateScripts() {

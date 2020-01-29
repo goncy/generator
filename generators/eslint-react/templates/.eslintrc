@@ -26,11 +26,15 @@
       }
     ],
     "prettier/prettier": [
-      "warn",
+      "error",
       {
+        "printWidth": 120,
+        "trailingComma": "all",
+        "tabWidth": 2,
         "semi": true,
-        "trailingComma": "es5",
-        "printWidth": 120
+        "singleQuote": false,
+        "bracketSpacing": false,
+        "arrowParens": "always"
       }
     ],
     "import/order": ["warn", {"newlines-between": "always"}],
