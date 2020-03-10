@@ -28,7 +28,8 @@ module.exports = {
       {
         "semi": true,
         "bracketSpacing": false,
-        "trailingComma": "es5"
+        "trailingComma": "es5",
+        "printWidth": 120
       }
     ]
   }

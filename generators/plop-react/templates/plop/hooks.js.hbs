@@ -1,0 +1,11 @@
+import React from "react";
+
+import {{pascalCase name}}Context from "./context";
+
+export function use{{pascalCase name}}() {
+  const {
+    state: { {{lowerCase name}} },
+  } = React.useContext({{pascalCase name}}Context);
+
+  return {{lowerCase name}};
+}
