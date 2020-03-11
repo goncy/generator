@@ -2,7 +2,7 @@ const Generator = require("yeoman-generator");
 
 module.exports = class extends Generator {
   installDependencies() {
-    this.yarnInstall(
+    this.npmInstall(
       [
         // "eslint",
         // "babel-eslint",
@@ -21,25 +21,20 @@ module.exports = class extends Generator {
     );
   }
 
+  vscode() {
+    this.fs.copy(this.templatePath(".vscode"), this.destinationPath(".vscode"));
+  }
+
   eslint() {
-    this.fs.copy(
-      this.templatePath(".eslintrc"),
-      this.destinationPath(".eslintrc")
-    );
+    this.fs.copy(this.templatePath(".eslintrc"), this.destinationPath(".eslintrc"));
   }
 
   eslintIgnore() {
-    this.fs.copy(
-      this.templatePath(".eslintignore"),
-      this.destinationPath(".eslintignore")
-    );
+    this.fs.copy(this.templatePath(".eslintignore"), this.destinationPath(".eslintignore"));
   }
 
   editorconfig() {
-    this.fs.copy(
-      this.templatePath(".editorconfig"),
-      this.destinationPath(".editorconfig")
-    );
+    this.fs.copy(this.templatePath(".editorconfig"), this.destinationPath(".editorconfig"));
   }
 
   env() {

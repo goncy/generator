@@ -6,7 +6,7 @@ module.exports = class extends Generator {
   }
 
   installDependencies() {
-    this.yarnInstall([
+    this.npmInstall([
       "redux",
       "react-redux",
       "redux-saga",
