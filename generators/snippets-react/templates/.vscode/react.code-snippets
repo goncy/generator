@@ -1,0 +1,45 @@
+{
+  "Stateless component": {
+    "prefix": "scomp",
+    "body": [
+        "import React from \"react\";",
+        "",
+        "const ${1:Component} = () => <div>{`<${1:Component} />`}</div>;",
+        "",
+        "export default ${1:Component};",
+        ""
+    ],
+    "description": "Stateless component"
+  },
+  "Import Ramda": {
+    "prefix": "ir",
+    "body": [
+        "import * as R from \"ramda\";"
+    ],
+    "description": "Imports Ramda"
+  },
+  "Import Styled components": {
+    "prefix": "is",
+    "body": [
+        "import styled from \"styled-components\";"
+    ],
+    "description": "Imports Styled components"
+  },
+  "Print to console": {
+    "prefix": "cl",
+    "body": [
+      "console.log('$1: ', $1);"
+    ],
+    "description": "Log output to console"
+  },
+  "Firebase change handler": {
+    "prefix": "foc",
+    "body": [
+      "onChange: (callback) =>",
+      "  database",
+      "    .collection(\"${1:collection}\")",
+      "    .onSnapshot((snapshot) => callback(snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()})))),"
+    ],
+    "description": "Create firebase on change handler"
+  },
+}

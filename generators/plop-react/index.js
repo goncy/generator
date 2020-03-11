@@ -10,9 +10,6 @@ module.exports = class extends Generator {
   }
 
   plopFile() {
-    this.fs.copy(
-      this.templatePath("plopfile.js"),
-      this.destinationPath("plopfile.js")
-    );
+    this.fs.copy(this.templatePath("plopfile.js"), this.destinationPath("plopfile.js"));
   }
 };

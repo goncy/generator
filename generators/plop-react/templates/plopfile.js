@@ -51,11 +51,6 @@ const actions = {
     path: `{{destinationpath}}/{{pascalCase name}}.js`,
     templateFile: `plop/component.js.hbs`,
   },
-  app: {
-    type: "addMany",
-    destination: `{{destinationpath}}`,
-    templateFiles: `plop/app/*`,
-  },
 };
 
 module.exports = function(plop) {
@@ -64,6 +59,7 @@ module.exports = function(plop) {
     prompts: [
       {
         type: "input",
+        default: "src",
         name: "destinationpath",
         message: "Destination path",
       },
@@ -76,6 +72,7 @@ module.exports = function(plop) {
     prompts: [
       {
         type: "input",
+        default: "src",
         name: "destinationpath",
         message: "Destination path",
       },
@@ -93,6 +90,7 @@ module.exports = function(plop) {
     prompts: [
       {
         type: "input",
+        default: "src",
         name: "destinationpath",
         message: "Destination path",
       },
@@ -110,6 +108,7 @@ module.exports = function(plop) {
     prompts: [
       {
         type: "input",
+        default: "src",
         name: "destinationpath",
         message: "Destination path",
       },
@@ -127,6 +126,7 @@ module.exports = function(plop) {
     prompts: [
       {
         type: "input",
+        default: "src",
         name: "destinationpath",
         message: "Destination path",
       },
@@ -137,18 +137,6 @@ module.exports = function(plop) {
       },
     ],
     actions: [actions.component],
-  });
-
-  plop.setGenerator("app", {
-    description: "react app module",
-    prompts: [
-      {
-        type: "input",
-        name: "destinationpath",
-        message: "Destination path",
-      },
-    ],
-    actions: [actions.app],
   });
 
   plop.setGenerator("module", {

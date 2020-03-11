@@ -1,3 +1,5 @@
+import {Switch, Route, Redirect} from "react-router-dom";
+
 import routes from "./rootRoutes"
 
 const Router = () => {
