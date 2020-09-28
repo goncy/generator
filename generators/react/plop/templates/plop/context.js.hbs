@@ -1,0 +1,14 @@
+import React from "react";
+
+const {{pascalCase name}}Context = React.createContext({});
+
+const {{pascalCase name}}Provider = ({ children }) => {
+  const [{{lowerCase name}}, set{{pascalCase name}}] = React.useState(null);
+
+  const state = {\{{lowerCase name}}\};
+  const actions = {set{{pascalCase name}}};
+
+  return <{{pascalCase name}}Context.Provider value=\{{state, actions}}>{children}</{{pascalCase name}}Context.Provider>;
+};
+
+export {\{{pascalCase name}}Provider as Provider, {{pascalCase name}}Context as default};

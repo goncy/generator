@@ -1,14 +1,15 @@
-{
+module.exports = {
   "root": true,
   "extends": [
     "react-app",
     "plugin:prettier/recommended",
-    "plugin:cypress/recommended",
     "prettier/react"
   ],
-  "plugins": ["cypress", "react-hooks"],
-  "env": {
-    "cypress/globals": true
+  "plugins": ["react-hooks"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "tsconfigRootDir": __dirname
   },
   "settings": {
     "react": {
@@ -28,7 +29,7 @@
     "prettier/prettier": [
       "error",
       {
-        "printWidth": 120,
+        "printWidth": 100,
         "trailingComma": "all",
         "tabWidth": 2,
         "semi": true,

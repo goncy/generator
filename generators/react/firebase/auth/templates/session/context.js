@@ -14,12 +14,12 @@ const SessionProvider = ({children}) => {
 
   React.useEffect(
     () =>
-      auth.onChange(user => {
+      auth.onChange((user) => {
         setUser(user);
 
         setStatus("restored");
       }),
-    []
+    [],
   );
 
   if (!user) return <Login login={actions.signIn} status={status} />;
