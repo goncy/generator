@@ -2,7 +2,7 @@ const Generator = require("yeoman-generator");
 
 module.exports = class extends Generator {
   installDependencies() {
-    this.yarnInstall(
+    this.npmInstall(
       [
         "@typescript-eslint/eslint-plugin",
         "@typescript-eslint/parser",
@@ -14,7 +14,7 @@ module.exports = class extends Generator {
         "eslint-plugin-react-hooks",
         "prettier",
       ],
-      {dev: true}
+      {"save-dev": true}
     );
   }
 

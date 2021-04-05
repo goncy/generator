@@ -13,21 +13,15 @@ module.exports = class extends Generator {
         "eslint-plugin-promise",
         "prettier",
       ],
-      {dev: true}
+      {"save-dev": true}
     );
   }
 
   eslint() {
-    this.fs.copy(
-      this.templatePath(".eslintrc"),
-      this.destinationPath(".eslintrc")
-    );
+    this.fs.copy(this.templatePath(".eslintrc"), this.destinationPath(".eslintrc"));
   }
 
   eslintIgnore() {
-    this.fs.copy(
-      this.templatePath(".eslintignore"),
-      this.destinationPath(".eslintignore")
-    );
+    this.fs.copy(this.templatePath(".eslintignore"), this.destinationPath(".eslintignore"));
   }
 };

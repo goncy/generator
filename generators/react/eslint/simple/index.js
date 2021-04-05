@@ -2,8 +2,8 @@ const Generator = require("yeoman-generator");
 
 module.exports = class extends Generator {
   installDependencies() {
-    this.yarnInstall(["eslint-config-prettier", "eslint-plugin-prettier", "eslint-plugin-cypress", "prettier"], {
-      dev: true,
+    this.npmInstall(["eslint-config-prettier", "eslint-plugin-prettier", "eslint-plugin-cypress", "prettier"], {
+      "save-dev": true,
     });
   }
 

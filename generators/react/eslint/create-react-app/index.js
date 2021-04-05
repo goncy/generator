@@ -13,7 +13,7 @@ module.exports = class extends Generator {
         "eslint-plugin-flowtype",
         "eslint-plugin-jsx-a11y",
       ],
-      {dev: true}
+      {"save-dev": true}
     );
   }
 

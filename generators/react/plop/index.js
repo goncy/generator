@@ -2,7 +2,7 @@ const Generator = require("yeoman-generator");
 
 module.exports = class extends Generator {
   installDependencies() {
-    this.npmInstall(["plop"], {dev: true});
+    this.npmInstall(["plop"], {"save-dev": true});
   }
 
   templates() {

@@ -17,19 +17,18 @@
     "plugin:react/recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
-    "prettier/@typescript-eslint",
-    "plugin:prettier/recommended",
-    "plugin:react-hooks/recommended"
+    "plugin:react-hooks/recommended",
+    "prettier"
   ],
   "plugins": ["react", "@typescript-eslint", "prettier", "import"],
   "rules": {
     "no-console": "warn",
-    "no-unused-vars": [
+    "@typescript-eslint/no-unused-vars": [
       "warn",
       {
         "args": "after-used",
         "ignoreRestSiblings": false,
-        "argsIgnorePattern": "^_$"
+        "argsIgnorePattern": "^_.*?$"
       }
     ],
     "prettier/prettier": [
@@ -47,8 +46,6 @@
     "import/order": ["warn", {"newlines-between": "always"}],
     "react/prop-types": "off",
     "react/self-closing-comp": "warn",
-    "react-hooks/rules-of-hooks": "warn",
-    "react-hooks/exhaustive-deps": "warn",
     "react/jsx-sort-props": ["warn", {
       "callbacksLast": true,
       "shorthandFirst": true,
