@@ -4,15 +4,16 @@ module.exports = class extends Generator {
   installDependencies() {
     this.npmInstall(
       [
-        "@typescript-eslint/eslint-plugin",
-        "@typescript-eslint/parser",
         "eslint",
         "eslint-config-prettier",
-        "eslint-plugin-prettier",
-        "eslint-plugin-react",
+        "eslint-config-standard",
         "eslint-plugin-import",
+        "eslint-plugin-node",
+        "eslint-plugin-prettier",
+        "eslint-plugin-promise",
+        "eslint-plugin-react",
         "eslint-plugin-react-hooks",
-        "prettier",
+        "@typescript-eslint/parser",
       ],
       {"save-dev": true}
     );

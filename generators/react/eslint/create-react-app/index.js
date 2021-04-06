@@ -5,13 +5,14 @@ module.exports = class extends Generator {
     this.yarnInstall(
       [
         "eslint",
-        "babel-eslint",
-        "eslint-config-react-app",
+        "eslint-config-prettier",
+        "eslint-config-standard",
         "eslint-plugin-import",
+        "eslint-plugin-node",
+        "eslint-plugin-prettier",
+        "eslint-plugin-promise",
         "eslint-plugin-react",
         "eslint-plugin-react-hooks",
-        "eslint-plugin-flowtype",
-        "eslint-plugin-jsx-a11y",
       ],
       {"save-dev": true}
     );
