@@ -30,7 +30,8 @@
         "semi": true,
         "singleQuote": false,
         "bracketSpacing": false,
-        "arrowParens": "always"
+        "arrowParens": "always",
+        "endOfLine":"auto"
       }
     ],
     "@typescript-eslint/no-unused-vars": [

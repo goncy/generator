@@ -29,7 +29,8 @@
         "semi": true,
         "singleQuote": false,
         "bracketSpacing": false,
-        "arrowParens": "always"
+        "arrowParens": "always",
+        "endOfLine":"auto"
       }
     ],
     "no-unused-vars": [
