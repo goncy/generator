@@ -14,6 +14,7 @@ module.exports = class extends Generator {
         "eslint-plugin-react",
         "eslint-plugin-react-hooks",
         "@typescript-eslint/parser",
+        "@typescript-eslint/eslint-plugin",
       ],
       {"save-dev": true}
     );

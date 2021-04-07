@@ -9,7 +9,7 @@
     "plugin:prettier/recommended",
     "plugin:react-hooks/recommended"
   ],
-  "plugins": ["react", "prettier", "import"],
+  "plugins": ["react", "prettier", "import", "@typescript-eslint"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
@@ -33,7 +33,7 @@
         "arrowParens": "always"
       }
     ],
-    "no-unused-vars": [
+    "@typescript-eslint/no-unused-vars": [
       "warn",
       {
         "args": "after-used",
