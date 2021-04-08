@@ -42,7 +42,14 @@
         "argsIgnorePattern": "^_.*?$"
       }
     ],
-    "import/order": ["warn", {"newlines-between": "always"}],
+    "import/order": ["warn", {
+      "pathGroups": [{
+        "pattern": "~/**",
+        "group": "external",
+        "position": "after"
+      }],
+      "newlines-between": "always"
+    }],
     "react/self-closing-comp": "warn",
     "react/jsx-sort-props": [
       "warn",
