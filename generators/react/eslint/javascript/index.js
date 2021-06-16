@@ -4,6 +4,7 @@ module.exports = class extends Generator {
   installDependencies() {
     this.yarnInstall(
       [
+        "prettier",
         "eslint",
         "eslint-config-prettier",
         "eslint-config-standard",

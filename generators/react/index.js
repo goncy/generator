@@ -14,11 +14,9 @@ module.exports = class extends Generator {
           },
           {
             name: "snippets",
-            checked: true,
           },
           {
             name: "plop",
-            checked: true,
           },
           {
             name: "firebase",
@@ -50,10 +48,13 @@ module.exports = class extends Generator {
         when: (answers) => answers.features.includes("eslint"),
         choices: [
           {
-            name: "create-react-app",
+            name: "typescript",
           },
           {
-            name: "typescript",
+            name: "next",
+          },
+          {
+            name: "javascript",
           },
         ],
       },
@@ -84,12 +85,16 @@ module.exports = class extends Generator {
     if (answers.eslint) {
       this.composeWith(require.resolve("./eslint/simple"));
 
-      if (answers.eslint.includes("create-react-app")) {
-        this.composeWith(require.resolve("./eslint/create-react-app"));
+      if (answers.eslint.includes("javascript")) {
+        this.composeWith(require.resolve("./eslint/javascript"));
       }
 
       if (answers.eslint.includes("typescript")) {
         this.composeWith(require.resolve("./eslint/typescript"));
+      }
+
+      if (answers.eslint.includes("next")) {
+        this.composeWith(require.resolve("./eslint/next"));
       }
     }
 
