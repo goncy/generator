@@ -5,8 +5,8 @@
     "node": true
   },
   "extends": [
-    "plugin:react/recommended",
     "plugin:prettier/recommended",
+    "plugin:react/recommended",
     "plugin:react-hooks/recommended"
   ],
   "plugins": ["react", "prettier", "import", "@typescript-eslint"],
