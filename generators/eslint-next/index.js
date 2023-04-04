@@ -8,22 +8,15 @@ module.exports = class extends Generator {
       "prettier",
       "eslint",
       "eslint-config-prettier",
-      "eslint-config-standard",
-      "eslint-config-next",
-      "eslint-plugin-import",
-      "eslint-plugin-node",
-      "eslint-plugin-n",
       "eslint-plugin-prettier",
-      "eslint-plugin-promise",
-      "eslint-plugin-react",
-      "eslint-plugin-react-hooks",
-      "@typescript-eslint/parser",
-      "@typescript-eslint/eslint-plugin",
+      "eslint-plugin-import",
+      "@vercel/style-guide",
     ]);
   }
 
   eslint() {
-    this.fs.copy(this.templatePath(".eslintrc.json"), this.destinationPath(".eslintrc.json"));
+    this.fs.copy(this.templatePath(".eslintrc.cjs"), this.destinationPath(".eslintrc.cjs"));
+    this.fs.delete(this.destinationPath(".eslintrc.json"));
   }
 
   vscode() {
