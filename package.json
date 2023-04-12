@@ -11,7 +11,7 @@
     "yeoman-generator"
   ],
   "dependencies": {
-    "yeoman-generator": "^2.0.1"
+    "yeoman-generator": "^5.7.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.0.3",
