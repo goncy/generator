@@ -9,6 +9,7 @@ module.exports = {
     require.resolve('@vercel/style-guide/eslint/typescript'),
     require.resolve('@vercel/style-guide/eslint/react'),
     require.resolve('@vercel/style-guide/eslint/next'),
+    "plugin:tailwindcss/recommended",
     "plugin:prettier/recommended",
   ],
   parserOptions: {
@@ -65,6 +66,7 @@ module.exports = {
         "reservedFirst": true
       }
     ],
+    "@typescript-eslint/no-non-null-assertion": "off",
     '@typescript-eslint/explicit-function-return-type': "off",
     "@typescript-eslint/no-unused-vars": [
       "warn",

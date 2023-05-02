@@ -10,7 +10,9 @@ module.exports = class extends Generator {
       "eslint-config-prettier",
       "eslint-plugin-prettier",
       "eslint-plugin-import",
+      "eslint-plugin-tailwindcss",
       "@vercel/style-guide",
+      "@next/eslint-plugin-next",
     ]);
   }
 
